@@ -187,7 +187,7 @@ http://127.0.0.1:5000
 **Muiz Musharrif Takey**
 **Owais Arif Batte**
 **Rahil Mazgaonkar**
-Final Year B.E. Computer Science & Engineering (Artificial Intelligence & Machine Learning)
+Mini Project in sem 5 of T.E. Computer Science & Engineering (Artificial Intelligence & Machine Learning)
 
 ---
 
