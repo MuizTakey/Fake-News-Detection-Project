@@ -1,0 +1,401 @@
+2025-10-23 00:30:14,559 - INFO - Model and TF-IDF vectorizer loaded successfully.
+2025-10-23 00:30:14,949 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-23 00:30:14,950 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-23 00:30:14,961 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 00:30:16,904 - INFO - Model and TF-IDF vectorizer loaded successfully.
+2025-10-23 00:30:17,322 - WARNING -  * Debugger is active!
+2025-10-23 00:30:17,324 - INFO -  * Debugger PIN: 603-667-668
+2025-10-23 00:30:50,273 - INFO - 127.0.0.1 - - [23/Oct/2025 00:30:50] "GET / HTTP/1.1" 200 -
+2025-10-23 00:30:50,967 - INFO - 127.0.0.1 - - [23/Oct/2025 00:30:50] "GET /static/background%20image.jpg HTTP/1.1" 200 -
+2025-10-23 00:30:51,688 - INFO - 127.0.0.1 - - [23/Oct/2025 00:30:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-23 00:30:56,460 - INFO - 127.0.0.1 - - [23/Oct/2025 00:30:56] "GET /load_dataset HTTP/1.1" 200 -
+2025-10-23 00:31:13,467 - INFO - 127.0.0.1 - - [23/Oct/2025 00:31:13] "GET /load_dataset HTTP/1.1" 200 -
+2025-10-23 00:31:19,698 - INFO - 127.0.0.1 - - [23/Oct/2025 00:31:19] "GET /selected_features HTTP/1.1" 200 -
+2025-10-23 00:31:27,933 - INFO - 127.0.0.1 - - [23/Oct/2025 00:31:27] "GET /selected_features HTTP/1.1" 200 -
+2025-10-23 00:31:28,862 - INFO - 127.0.0.1 - - [23/Oct/2025 00:31:28] "GET /selected_features HTTP/1.1" 200 -
+2025-10-23 00:31:43,433 - ERROR - Error preprocessing text: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Muiz/nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-10-23 00:31:43,434 - INFO - 127.0.0.1 - - [23/Oct/2025 00:31:43] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-10-23 00:31:57,545 - ERROR - Error preprocessing text: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Muiz/nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-10-23 00:31:57,546 - INFO - 127.0.0.1 - - [23/Oct/2025 00:31:57] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-10-23 00:32:50,737 - ERROR - Error preprocessing text: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Muiz/nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-10-23 00:32:50,739 - INFO - 127.0.0.1 - - [23/Oct/2025 00:32:50] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-10-23 00:32:55,054 - ERROR - Error preprocessing text: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Muiz/nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-10-23 00:32:55,056 - INFO - 127.0.0.1 - - [23/Oct/2025 00:32:55] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-10-23 00:32:58,820 - ERROR - Error preprocessing text: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Muiz/nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-10-23 00:32:58,820 - INFO - 127.0.0.1 - - [23/Oct/2025 00:32:58] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-10-23 00:45:52,376 - INFO - Model and TF-IDF vectorizer loaded successfully.
+2025-10-23 00:45:52,779 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-23 00:45:52,780 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-23 00:45:52,793 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 00:45:54,721 - INFO - Model and TF-IDF vectorizer loaded successfully.
+2025-10-23 00:45:55,463 - WARNING -  * Debugger is active!
+2025-10-23 00:45:55,465 - INFO -  * Debugger PIN: 603-667-668
+2025-10-23 00:45:58,345 - INFO - 127.0.0.1 - - [23/Oct/2025 00:45:58] "GET / HTTP/1.1" 200 -
+2025-10-23 00:46:06,328 - INFO - 127.0.0.1 - - [23/Oct/2025 00:46:06] "GET /load_dataset HTTP/1.1" 200 -
+2025-10-23 00:46:11,762 - INFO - 127.0.0.1 - - [23/Oct/2025 00:46:11] "GET /load_dataset HTTP/1.1" 200 -
+2025-10-23 00:46:14,567 - INFO - 127.0.0.1 - - [23/Oct/2025 00:46:14] "GET /load_dataset HTTP/1.1" 200 -
+2025-10-23 00:46:17,927 - INFO - 127.0.0.1 - - [23/Oct/2025 00:46:17] "GET /selected_features HTTP/1.1" 200 -
+2025-10-23 00:46:23,745 - INFO - 127.0.0.1 - - [23/Oct/2025 00:46:23] "GET /selected_features HTTP/1.1" 200 -
+2025-10-23 00:47:00,565 - ERROR - Error preprocessing text: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Muiz/nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-10-23 00:47:00,569 - INFO - 127.0.0.1 - - [23/Oct/2025 00:47:00] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-10-23 00:48:12,881 - ERROR - Error preprocessing text: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Muiz/nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-10-23 00:48:12,883 - INFO - 127.0.0.1 - - [23/Oct/2025 00:48:12] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-10-23 00:48:13,741 - ERROR - Error preprocessing text: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Muiz/nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-10-23 00:48:13,742 - INFO - 127.0.0.1 - - [23/Oct/2025 00:48:13] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-10-23 00:48:14,763 - ERROR - Error preprocessing text: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Muiz/nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-10-23 00:48:14,764 - INFO - 127.0.0.1 - - [23/Oct/2025 00:48:14] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-10-23 00:48:15,396 - ERROR - Error preprocessing text: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Muiz/nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-10-23 00:48:15,397 - INFO - 127.0.0.1 - - [23/Oct/2025 00:48:15] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-10-23 00:48:15,565 - ERROR - Error preprocessing text: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Muiz/nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-10-23 00:48:15,580 - INFO - 127.0.0.1 - - [23/Oct/2025 00:48:15] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-10-23 00:48:15,798 - ERROR - Error preprocessing text: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Muiz/nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-10-23 00:48:15,799 - INFO - 127.0.0.1 - - [23/Oct/2025 00:48:15] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-10-23 00:48:16,027 - ERROR - Error preprocessing text: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Muiz/nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\Muiz\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-10-23 00:48:16,028 - INFO - 127.0.0.1 - - [23/Oct/2025 00:48:16] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-10-23 00:51:50,799 - INFO -  * Detected change in 'C:\\Users\\Muiz\\OneDrive\\Desktop\\Mini Project Sem 5\\Fake_News_Detection\\api.py', reloading
+2025-10-23 00:51:50,824 - INFO -  * Detected change in 'C:\\Users\\Muiz\\OneDrive\\Desktop\\Mini Project Sem 5\\Fake_News_Detection\\api.py', reloading
+2025-10-23 00:51:52,527 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 00:51:58,683 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 00:53:10,861 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 00:53:54,010 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 00:54:20,927 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 01:20:02,041 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 01:22:52,175 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 01:22:55,696 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 01:26:48,489 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 01:42:45,609 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 01:42:51,623 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 01:42:55,542 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 01:43:09,268 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 01:47:40,521 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 01:49:15,101 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 01:53:50,965 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 01:57:30,431 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:02:48,911 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:03:40,122 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:07:47,675 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:12:52,424 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:12:59,265 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:03,132 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:06,859 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:11,093 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:15,002 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:18,641 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:22,621 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:27,080 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:30,953 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:34,945 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:38,662 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:42,644 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:46,471 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:50,602 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:13:56,645 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:00,690 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:04,425 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:08,214 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:11,863 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:15,572 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:19,200 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:23,224 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:27,170 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:30,010 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:34,080 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:38,629 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:42,731 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:46,959 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:14:52,094 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:16:10,319 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:16:14,251 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:16:52,572 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:18:48,042 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:18:52,773 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:19:32,861 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-23 02:22:03,740 - INFO -  * Restarting with watchdog (windowsapi)

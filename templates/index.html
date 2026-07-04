@@ -1,242 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fake News Detector</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: url("/static/background image.jpg") no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      color: #333;
-    }
-
-    .container {
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      width: 95%;
-      max-width: 900px;
-      text-align: center;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    header h1 {
-      color: #2c3e50;
-      font-size: 2.2em;
-      font-weight: 700;
-    }
-
-    .tab-content {
-      margin-top: 20px;
-      text-align: left;
-    }
-
-    textarea {
-      width: 100%;
-      height: 150px;
-      padding: 15px;
-      border: 2px solid #4c7b8fff;
-      border-radius: 10px;
-      font-size: 1em;
-      resize: vertical;
-    }
-
-    button {
-      background-color: #6e8efb;
-      color: white;
-      padding: 10px 25px;
-      border: none;
-      border-radius: 25px;
-      font-size: 1.1em;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #5c7cfa;
-      transform: scale(1.05);
-    }
-
-    .result {
-      font-size: 1.4em;
-      font-weight: 600;
-      margin: 20px 0;
-      padding: 10px;
-      border-radius: 8px;
-      min-height: 30px;
-    }
-
-    .result.real {
-      color: #27ae60;
-      background-color: #e8f5e9;
-    }
-
-    .result.fake {
-      color: #c0392b;
-      background-color: #fce4e4;
-    }
-
-    .table-container {
-      max-height: 400px;
-      overflow-y: auto;
-      border: 1px solid #ccc;
-    }
-
-    ul.list-group {
-      max-height: 400px;
-      overflow-y: auto;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fake News Detection</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+}
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  width: 95%;
+  max-width: 800px;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.step {
+  display: none;
+  text-align: left;
+  margin-top: 20px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+.step.active {
+  display: block;
+}
+button {
+  background-color: #000;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+button:hover {
+  transform: scale(1.05);
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  resize: vertical;
+  margin-top: 10px;
+}
+.result {
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+  min-height: 30px;
+}
+.result.real {
+  color: #27ae60;
+  background-color: #e8f5e9;
+}
+.result.fake {
+  color: #c0392b;
+  background-color: #fce4e4;
+}
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.progress {
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.progress-bar {
+  height: 10px;
+  width: 0%;
+  background: #000;
+  transition: width 0.5s ease;
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header class="mb-3">
-      <h1>Fake News Detection using PSO + XGBoost</h1>
-    </header>
+<div class="container">
+  <h2>Fake News Detection (PSO + XGBoost)</h2>
 
-    <!-- Navigation Tabs -->
-    <ul class="nav nav-tabs" id="tabs">
-      <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#dataset">Dataset</a></li>
-      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#features">Selected Features</a></li>
-      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#predict">Prediction</a></li>
-    </ul>
+  <!-- Progress bar -->
+  <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
 
-    <div class="tab-content mt-3">
-      <!-- Dataset Tab -->
-      <div class="tab-pane fade show active" id="dataset">
-        <h4>Loaded Dataset Preview</h4>
-        <button id="loadDataset" class="btn btn-primary mb-3">Load Dataset</button>
-        <div id="datasetPreview" class="table-container"></div>
-      </div>
-
-      <!-- Feature Selection Tab -->
-      <div class="tab-pane fade" id="features">
-        <h4>Selected Features for Classification</h4>
-        <button id="loadFeatures" class="btn btn-success mb-3">Show Features</button>
-        <ul id="featureList" class="list-group"></ul>
-      </div>
-
-      <!-- Prediction Tab -->
-      <div class="tab-pane fade" id="predict">
-        <div class="input-section">
-          <label for="newsInput" class="form-label">Enter News Article:</label>
-          <textarea id="newsInput" placeholder="Paste your news article here..."></textarea>
-        </div>
-        <button id="predictButton">Predict</button>
-        <div id="result" class="result"></div>
-        <div id="status" class="status mt-2">Ready to predict...</div>
-      </div>
-    </div>
+  <!-- Step 1: Dataset -->
+  <div id="stepDataset" class="step active">
+    <p><strong>Dataset:</strong> cleaned_combined_news_dataset.csv</p>
+    <p id="dsLoading">Dataset not loaded yet.</p>
+    <button id="btnLoad">Load Dataset</button>
+    <div id="datasetPreview" style="margin-top:10px;"></div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Step 2: Prediction -->
+  <div id="stepPredict" class="step">
+    <label for="newsInput"><strong>Enter News Article:</strong></label>
+    <textarea id="newsInput" placeholder="Enter News / Article here..."></textarea>
+    <button id="predictButton">Predict</button>
+    <div id="result" class="result"></div>
+    <p id="highlightedFeatures" style="margin-top:10px;"><strong>Highlighted Features:</strong></p>
 
-  <script>
-    // Load dataset preview
-    $('#loadDataset').click(() => {
-      $('#datasetPreview').html('<p>Loading dataset...</p>');
-      $.get('/load_dataset', data => {
-        if (data.status === 'success') {
-          Swal.fire({
-            icon: 'success',
-            title: 'Success!',
-            text: data.message || 'Dataset loaded successfully.',
-            showConfirmButton: false,
-            timer: 2000
-          });
+    <div id="accuracy-box" style="margin-top:20px; display:none; border-top:1px solid #ccc; padding-top:10px;">
+      <h5>Model Accuracy: <span id="accuracy-value" style="color:#000;font-weight:bold;"></span></h5>
+      <p id="accuracy-desc" style="font-size:0.9em;color:#555;"></p>
+    </div>
+  </div>
+</div>
 
-          let html = '<table class="table table-bordered table-sm"><thead><tr>';
-          data.columns.forEach(c => html += `<th>${c}</th>`);
-          html += '</tr></thead><tbody>';
-          data.preview.forEach(row => {
-            html += '<tr>';
-            data.columns.forEach(c => html += `<td>${row[c]}</td>`);
-            html += '</tr>';
-          });
-          html += '</tbody></table>';
-          $('#datasetPreview').html(html);
-        } else {
-          Swal.fire('Error', data.error || 'Unknown error loading dataset.', 'error');
-        }
-      }).fail(() => {
-        Swal.fire('Error', 'Failed to connect to server.', 'error');
+<script>
+const btnLoad = document.getElementById('btnLoad');
+const dsLoading = document.getElementById('dsLoading');
+const stepDataset = document.getElementById('stepDataset');
+const stepPredict = document.getElementById('stepPredict');
+const progressBar = document.getElementById('progressBar');
+
+function setProgress(step) {
+  const widths = ['0%', '50%', '100%'];
+  progressBar.style.width = widths[step];
+}
+
+async function fetchJSON(url) {
+  try {
+    const resp = await fetch(url);
+    if (!resp.ok) return null;
+    return await resp.json();
+  } catch {
+    return null;
+  }
+}
+
+/* ✅ Dataset Load button with auto-tab switch + accuracy fetch */
+btnLoad.addEventListener('click', async () => {
+  btnLoad.disabled = true;
+  dsLoading.style.display = 'block';
+  dsLoading.innerText = '⏳ Loading dataset...';
+  setProgress(1);
+
+  const resp = await fetchJSON('/load_dataset');
+  if (resp && resp.status === 'success') {
+    dsLoading.innerText = '✅ Dataset loaded successfully!';
+    setTimeout(async () => {
+      stepDataset.classList.remove('active');
+      stepPredict.classList.add('active');
+      setProgress(2);
+
+      Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: 'Dataset Loaded!',
+        text: 'Redirecting to Prediction tab...',
+        showConfirmButton: false,
+        timer: 1300
       });
-    });
 
-    // Load selected features
-    $('#loadFeatures').click(() => {
-      $('#featureList').html('<li class="list-group-item">Loading features...</li>');
-      $.get('/selected_features', data => {
-        if (data.status === 'success') {
-          let html = '';
-          data.features.forEach(f => html += `<li class="list-group-item">${f}</li>`);
-          $('#featureList').html(html);
-        } else {
-          $('#featureList').html(`<li class="list-group-item text-danger">${data.error}</li>`);
-        }
-      }).fail(() => {
-        $('#featureList').html('<li class="list-group-item text-danger">Failed to load features.</li>');
-      });
-    });
-
-    // Predict news
-    document.getElementById('predictButton').addEventListener('click', async () => {
-      const newsInput = document.getElementById('newsInput').value.trim();
-      const resultDiv = document.getElementById('result');
-      const statusDiv = document.getElementById('status');
-
-      if (!newsInput) {
-        Swal.fire('Warning', 'Please enter a news article.', 'warning');
-        return;
-      }
-
-      statusDiv.textContent = 'Predicting...';
-      resultDiv.textContent = '';
-
+      // Auto fetch accuracy
       try {
-        const response = await fetch("/predict", {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ text: newsInput })
-        });
-        const data = await response.json();
-
-        if (data.error) {
-          Swal.fire('Error', data.error, 'error');
-          return;
+        const accResp = await fetchJSON('/model_accuracy');
+        if (accResp && accResp.status === 'success') {
+          let accVal = accResp.accuracy;
+          if (accVal <= 1) accVal = (accVal * 100).toFixed(2);
+          document.getElementById('accuracy-value').innerText = accVal + '%';
+          document.getElementById('accuracy-box').style.display = 'block';
+          document.getElementById('accuracy-desc').innerText = 'Auto-fetched after dataset load';
         }
-
-        Swal.fire({
-          icon: 'info',
-          title: 'Prediction Complete',
-          text: `The news is ${data.prediction.toUpperCase()}`,
-          timer: 2500
-        });
-
-        resultDiv.textContent = `Prediction: The news is ${data.prediction}`;
-        resultDiv.className = `result ${data.prediction}`;
-        statusDiv.textContent = 'Prediction complete.';
-      } catch (error) {
-        Swal.fire('Error', 'Failed to connect to Flask API.', 'error');
+      } catch (e) {
+        console.warn('Could not auto-load accuracy');
       }
+
+    }, 900);
+  } else {
+    dsLoading.innerText = '⚠️ Failed to load dataset.';
+    Swal.fire('Error', 'Could not load dataset from server', 'error');
+    btnLoad.disabled = false;
+  }
+});
+
+/* ✅ Predict Button */
+document.getElementById('predictButton').addEventListener('click', async () => {
+  const newsText = document.getElementById('newsInput').value.trim();
+  if (!newsText) {
+    Swal.fire('Warning', 'Please enter a news article', 'warning');
+    return;
+  }
+
+  document.getElementById('result').textContent = 'Predicting...';
+  document.getElementById('highlightedFeatures').innerHTML = '<strong>Highlighted Features:</strong>';
+
+  try {
+    const resp = await fetch('/predict', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: newsText })
     });
-  </script>
+
+    const data = await resp.json();
+    if (data.error) {
+      Swal.fire('Error', data.error, 'error');
+      return;
+    }
+
+    const resultEl = document.getElementById('result');
+    resultEl.textContent = `Prediction: The news is ${data.prediction.toUpperCase()}`;
+    resultEl.className = `result ${data.prediction}`;
+
+    // Highlight important features
+    const featRes = await fetch('/selected_features');
+    const featData = await featRes.json();
+    if (featData.status === 'success') {
+      let text = newsText;
+      for (const [f, score] of Object.entries(featData.features)) {
+        const regex = new RegExp(`\\b(${f})\\b`, 'gi');
+        text = text.replace(regex, `<span class="highlight" title="Importance: ${score.toFixed(2)}">${f}</span>`);
+      }
+      document.getElementById('highlightedFeatures').innerHTML += '<div style="margin-top:10px;">' + text + '</div>';
+    }
+  } catch {
+    Swal.fire('Error', 'Failed to connect to server', 'error');
+  }
+});
+</script>
 </body>
 </html>
