@@ -4791,3 +4791,16 @@
 2026-07-04 16:03:58,832 - INFO - 127.0.0.1 - - [04/Jul/2026 16:03:58] "GET / HTTP/1.1" 200 -
 2026-07-04 16:04:11,556 - INFO - 127.0.0.1 - - [04/Jul/2026 16:04:11] "GET /load_dataset HTTP/1.1" 200 -
 2026-07-04 16:04:19,235 - INFO - 127.0.0.1 - - [04/Jul/2026 16:04:19] "GET /model_accuracy HTTP/1.1" 200 -
+2026-07-04 16:27:28,698 - INFO - Model and TF-IDF vectorizer loaded successfully.
+2026-07-04 16:27:29,022 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-04 16:27:29,022 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-04 16:27:29,032 - INFO -  * Restarting with watchdog (windowsapi)
+2026-07-04 16:27:30,636 - INFO - Model and TF-IDF vectorizer loaded successfully.
+2026-07-04 16:27:30,932 - WARNING -  * Debugger is active!
+2026-07-04 16:27:30,934 - INFO -  * Debugger PIN: 603-667-668
+2026-07-04 16:27:33,608 - INFO - 127.0.0.1 - - [04/Jul/2026 16:27:33] "GET / HTTP/1.1" 200 -
+2026-07-04 16:29:05,679 - INFO - 127.0.0.1 - - [04/Jul/2026 16:29:05] "GET /load_dataset HTTP/1.1" 200 -
+2026-07-04 16:29:12,049 - INFO - 127.0.0.1 - - [04/Jul/2026 16:29:12] "GET /model_accuracy HTTP/1.1" 200 -
+2026-07-04 16:31:07,830 - INFO - 127.0.0.1 - - [04/Jul/2026 16:31:07] "POST /predict HTTP/1.1" 200 -
+2026-07-04 16:31:07,838 - INFO - 127.0.0.1 - - [04/Jul/2026 16:31:07] "GET /selected_features HTTP/1.1" 200 -
